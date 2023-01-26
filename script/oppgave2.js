@@ -49,3 +49,14 @@ for (i = 0; i < tenCities.length; i++) {
     displayFiveLast.innerHTML += `<li>${tenCities[i]}</li>`;
   }
 }
+
+const hiddenArr = []
+
+const citiesRmvBtn = document.querySelector("#removeButton");
+citiesRmvBtn.addEventListener("click", () => {
+  citiesRmv();
+})
+
+const citiesRmv = function() {
+  tenCities.splice(1, 0, hiddenArr);
+}
