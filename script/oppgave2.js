@@ -11,14 +11,13 @@ const tenCities = [
   "Tønsberg",
 ];
 
-let firstThree = [];
-let lastFive = [];
-
 const displayTenCities = document.querySelector("#displayTenCities");
 const displayThreeFirst = document.querySelector("#displayThreeCities");
 const displayFiveLast = document.querySelector("#displayFiveCities");
 
-/* for (i = 0; i < tenCities.length; i++) {
+/*let firstThree = [];
+  let lastFive = [];
+  for (i = 0; i < tenCities.length; i++) {
   displayTenCities.innerHTML += `<li>${tenCities[i]}</li>`;
   lastFive.splice(0, 0, tenCities[i]);
   console.log(`add ${lastFive}`);
@@ -39,8 +38,6 @@ console.log(tenCities);
 console.log(firstThree);
 console.log(lastFive); */
 
-
-
 for (i = 0; i < tenCities.length; i++) {
   displayTenCities.innerHTML += `<li>${tenCities[i]}</li>`;
   if (i < 3) {
@@ -50,13 +47,15 @@ for (i = 0; i < tenCities.length; i++) {
   }
 }
 
-const hiddenArr = []
+const hiddenArr = [];
 
 const citiesRmvBtn = document.querySelector("#removeButton");
 citiesRmvBtn.addEventListener("click", () => {
   citiesRmv();
-})
+});
 
-const citiesRmv = function() {
-  tenCities.splice(1, 0, hiddenArr);
-}
+const citiesRmv = function () {
+  tenCities.splice(0, 1, hiddenArr);
+};
+
+// brain dead, come back later
