@@ -16,6 +16,7 @@ const displayThreeFirst = document.querySelector("#displayThreeCities");
 const displayFiveLast = document.querySelector("#displayFiveCities");
 const displayAmount = document.querySelector("#displayAmount");
 
+displayAmount.disabled = true;
 const incrBtn = document.querySelector("#incrementButton");
 const decrBtn = document.getElementById("decrementButton");
 
@@ -34,12 +35,20 @@ const decrementValue = function () {
   count--;
   displayCities(count);
   displayAmount.value = count;
+  if (count < 1) {
+    decrBtn.disabled = true;
+  }
+  incrBtn.disabled = false;
 };
 
 function incrementValue() {
   count++;
   displayCities(count);
   displayAmount.value = count;
+  if (count == tenCities.length) {
+    incrBtn.disabled = true;
+  }
+  decrBtn.disabled = false;
 }
 
 incrBtn.addEventListener("click", incrementValue);
@@ -52,3 +61,8 @@ function displayCities() {
   }
 }
 displayCities(count);
+
+// TODO
+// make sure to disable input field to only show count value
+//disable buttones to prevent from adding undefined to the list
+// ? if count === tenCities.lenght incrBtn.disable = true
