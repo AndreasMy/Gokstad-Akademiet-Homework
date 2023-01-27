@@ -14,32 +14,12 @@ const tenCities = [
 const displayTenCities = document.querySelector("#displayTenCities");
 const displayThreeFirst = document.querySelector("#displayThreeCities");
 const displayFiveLast = document.querySelector("#displayFiveCities");
+const displayAmount = document.querySelector("#displayAmount");
 
-/*let firstThree = [];
-  let lastFive = [];
-  for (i = 0; i < tenCities.length; i++) {
-  displayTenCities.innerHTML += `<li>${tenCities[i]}</li>`;
-  lastFive.splice(0, 0, tenCities[i]);
-  console.log(`add ${lastFive}`);
-
-  if (i < 3) {
-    firstThree.splice(3, 0, tenCities[i]);
-    displayThreeFirst.innerHTML += `<li>${firstThree[i]}</li>`;
-  }
-
-  if (i > 4) {
-    const newArr = lastFive.shift();
-    displayFiveLast.innerHTML += `<li>${newArr}</li>`;
-    console.log(`shift ${newArr}`);
-  }
-}
-
-console.log(tenCities);
-console.log(firstThree);
-console.log(lastFive); */
+const incrBtn = document.querySelector("#incrementButton");
+const decrBtn = document.getElementById("decrementButton");
 
 for (i = 0; i < tenCities.length; i++) {
-  displayTenCities.innerHTML += `<li>${tenCities[i]}</li>`;
   if (i < 3) {
     displayThreeFirst.innerHTML += `<li>${tenCities[i]}</li>`;
   } else if (i > 4) {
@@ -47,15 +27,28 @@ for (i = 0; i < tenCities.length; i++) {
   }
 }
 
-const hiddenArr = [];
+let count = 10;
+displayAmount.value = count;
 
-const citiesRmvBtn = document.querySelector("#removeButton");
-citiesRmvBtn.addEventListener("click", () => {
-  citiesRmv();
-});
-
-const citiesRmv = function () {
-  tenCities.splice(0, 1, hiddenArr);
+const decrementValue = function () {
+  count--;
+  displayCities(count);
+  displayAmount.value = count;
 };
 
-// brain dead, come back later
+function incrementValue() {
+  count++;
+  displayCities(count);
+  displayAmount.value = count;
+}
+
+incrBtn.addEventListener("click", incrementValue);
+decrBtn.addEventListener("click", decrementValue);
+
+function displayCities() {
+  displayTenCities.innerHTML = "";
+  for (i = 0; i < count; i++) {
+    displayTenCities.innerHTML += `<li>${tenCities[i]}</li>`;
+  }
+}
+displayCities(count);
