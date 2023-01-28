@@ -27,6 +27,14 @@ a {
   text-decoration: none;
 }
 
+a,
+p,
+h1,
+h2,
+h3 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
 button {
   padding: 4px;
   margin: 12px 0;
@@ -37,6 +45,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+
+.main-contianer {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
 }
 
 .nav-links {
@@ -48,6 +63,8 @@ main {
 }
 
 .card-container {
+  width: 345px;
+  height: 170px;
   display: flex;
   margin: 12px;
 }
@@ -64,7 +81,9 @@ main {
 .card-text {
   margin: 5px;
 }
-
+.form-text {
+  font-weight: 600;
+}
 .card-image {
   margin-right: 12px;
 }
@@ -73,10 +92,9 @@ main {
   margin: 0 0 0 22px;
 }
 
-.input-text-container, 
+.input-text-container,
 .text-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-

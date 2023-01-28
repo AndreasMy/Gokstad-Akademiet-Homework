@@ -10,6 +10,7 @@ const displAge = document.querySelector("#displayAge");
 const displCity = document.querySelector("#displayCity");
 const displCountry = document.querySelector("#displayCountry");
 const makeCard = document.querySelector(".card");
+
 //Button
 const submitBtn = document.querySelector("#generatePerson");
 
