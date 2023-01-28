@@ -67,3 +67,14 @@ main {
 .card-image {
   margin-right: 12px;
 }
+
+.input-text-container {
+  margin: 0 0 0 22px;
+}
+
+.input-text-container, 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
