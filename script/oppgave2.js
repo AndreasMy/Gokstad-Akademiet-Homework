@@ -16,7 +16,6 @@ const displayThreeFirst = document.querySelector("#displayThreeCities");
 const displayFiveLast = document.querySelector("#displayFiveCities");
 const displayAmount = document.querySelector("#displayAmount");
 
-displayAmount.disabled = true;
 const incrBtn = document.querySelector("#incrementButton");
 const decrBtn = document.getElementById("decrementButton");
 
@@ -28,6 +27,7 @@ for (i = 0; i < tenCities.length; i++) {
   }
 }
 
+displayAmount.disabled = true;
 let count = 10;
 displayAmount.value = count;
 
