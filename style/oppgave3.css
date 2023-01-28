@@ -28,7 +28,8 @@ a {
 }
 
 button {
-  padding: 2px;
+  padding: 4px;
+  margin: 12px 0;
 }
 
 main {

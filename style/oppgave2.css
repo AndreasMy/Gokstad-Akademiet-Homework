@@ -38,7 +38,7 @@ main {
   align-items: center;
 }
 
-.nav_links {
+.nav-links {
   display: flex;
   flex-direction: row;
   width: 100%;
