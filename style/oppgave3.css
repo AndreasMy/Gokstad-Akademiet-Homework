@@ -58,6 +58,7 @@ main {
   padding: 8px;
   border: solid 1.2px rgb(0, 1, 66);
   background-color: rgb(255, 250, 240);
+  display: none;
 }
 
 .card-text {
@@ -78,3 +79,4 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+

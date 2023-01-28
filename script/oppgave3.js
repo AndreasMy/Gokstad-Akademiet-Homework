@@ -9,13 +9,14 @@ const displName = document.querySelector("#displayFullName");
 const displAge = document.querySelector("#displayAge");
 const displCity = document.querySelector("#displayCity");
 const displCountry = document.querySelector("#displayCountry");
-
+const makeCard = document.querySelector(".card");
 //Button
 const submitBtn = document.querySelector("#generatePerson");
 
 submitBtn.addEventListener("click", () => {
-    displayInputValues();
-})
+  displayInputValues();
+  showCard()
+});
 
 function displayInputValues() {
   displName.innerHTML = `${inputFullName.value}`;
@@ -24,7 +25,11 @@ function displayInputValues() {
   displCountry.innerHTML = `${inputCountry.value}`;
 }
 
+function showCard() {
+    makeCard.style.display = "flex";
+}
 
 // !assign everything to their own function and dump them all into one fucking button
 //! Gut the card class and dump it in there as innerHTML with js
 //? implement validation functionality
+
