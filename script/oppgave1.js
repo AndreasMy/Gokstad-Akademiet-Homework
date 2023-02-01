@@ -1,3 +1,5 @@
+// Oppgave 1
+
 console.log('Hello world');
 
 const promptBtn = document.querySelector('#triggerAlert');

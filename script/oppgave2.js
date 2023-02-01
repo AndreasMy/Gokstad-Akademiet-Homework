@@ -1,3 +1,5 @@
+// Oppgave 2
+
 const tenCities = [
   "Oslo",
   "Bergen",

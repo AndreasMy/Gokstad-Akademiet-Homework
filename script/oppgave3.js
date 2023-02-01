@@ -1,3 +1,5 @@
+// Oppgave 3
+
 // Inputs
 const inputFullName = document.querySelector("#fullName");
 const inputAge = document.querySelector("#age");
