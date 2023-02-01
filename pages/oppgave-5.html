@@ -4,16 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="..style/oppgave5.css" />
+    <link rel="stylesheet" href="../style/oppgave5.css" />
   </head>
   <body>
-    <h1>Handleliste</h1>
-    <input class="input" type="text" name="product" id="productInput" />
-    <button  id="productSubmit" class="addBtn" >add</button>
-    <button id="productRemove" class="removeBtn">rmv</button>
-    <ul id="productList"></ul>
+    <header>
+      <nav>
+        <ul class="nav-links" id="navLinks"></ul>
+        <li><a href="../pages/chatgpt.html">chatGpt</a></li>
+      </nav>
+    </header>
+    <main>
+      <div class="content-container">
+        <h1>Handleliste</h1>
+        <div class="form-and-btn">
+          <input class="input" type="text" name="product" id="productInput" />
+          <button id="productSubmit" class="addBtn">add</button>
+          <button id="productRemove" class="removeBtn">rmv</button>
+        </div>
+        <ul id="productList"></ul>
+      </div>
+    </main>
 
     <script src="../script/navigation.js"></script>
-    <script src="../oppgave5.js"></script>
+    <script src="../script/oppgave5.js"></script>
   </body>
 </html>

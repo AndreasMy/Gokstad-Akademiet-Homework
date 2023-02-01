@@ -18,7 +18,7 @@ const submitBtn = document.querySelector("#generatePerson");
 
 submitBtn.addEventListener("click", () => {
   displayInputValues();
-  showCard()
+  showCard();
 });
 
 function displayInputValues() {
@@ -29,10 +29,9 @@ function displayInputValues() {
 }
 
 function showCard() {
-    makeCard.style.display = "flex";
+  makeCard.style.display = "flex";
 }
 
 // !assign everything to their own function and dump them all into one fucking button
 //! Gut the card class and dump it in there as innerHTML with js
 //? implement validation functionality
-

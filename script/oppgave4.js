@@ -12,14 +12,13 @@ const predictions = [
   "You will lose",
   "You will buy chocolate",
   "You will not will, because all will is God's will",
-  "Fifty percent chance of snow this evening"
+  "Fifty percent chance of snow this evening",
 ];
 
 function getPrediction() {
   const setPrediction =
     predictions[Math.floor(Math.random() * predictions.length)];
-    displayPrediction.innerHTML = `${setPrediction}`
-
+  displayPrediction.innerHTML = `${setPrediction}`;
 }
 
 //* Create a madlib prediction generator
