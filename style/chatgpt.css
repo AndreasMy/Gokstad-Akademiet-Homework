@@ -28,6 +28,10 @@ header {
     margin: 12px;
     list-style: none;
  }
+ 
+ h3 {
+    margin: 18px;
+ } 
 
  a {
     text-decoration: none;
