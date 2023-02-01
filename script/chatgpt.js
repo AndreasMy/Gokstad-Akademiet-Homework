@@ -14,10 +14,8 @@ const keyWords = [
 ];
 
 inputField.oninput = function () {
-  if (keyWords.includes(inputField.value)) {
-    document.body.style.backgroundColor = inputField.value;
-  }
+  document.body.style.backgroundColor = inputField.value;
 };
 
-//todo: associate words with colors? 
-//todo: 
+//todo: associate words with colors?
+//todo:

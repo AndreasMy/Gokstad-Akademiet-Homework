@@ -22,4 +22,7 @@ function getPrediction() {
 
 }
 
-
+//* Create a madlib prediction generator
+//? create a madlib template
+//? spend copious amounts of time on filling in arrays with words
+//? ...profit!
