@@ -47,7 +47,7 @@ function displayList() {
   //* use either map or for each to add new items
 
   for (let i = 0; i < products.length; i++) {
-    productList.innerHTML += `<li>${products[i]} <div onclick="removeProduct(${i})" class="rmv-line">-</div></li>`;
+    productList.innerHTML += `<li class="list-item">${products[i]} <div onclick="removeProduct(${i})" class="rmv-line">-</div></li>`;
 
   }
 }

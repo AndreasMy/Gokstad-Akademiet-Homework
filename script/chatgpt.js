@@ -15,6 +15,7 @@ const keyWords = [
 
 inputField.oninput = function () {
   document.body.style.backgroundColor = inputField.value;
+  document.body.style.animationDelay = `1s`; 
 };
 
 //todo: associate words with colors?
