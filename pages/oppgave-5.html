@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="../style/oppgave5.css" />
+    <link rel="stylesheet" href="../style/navigation.css" />
   </head>
   <body>
     <header>
       <nav>
-        <ul class="nav-links" id="navLinks"></ul>
-        <li><a href="../pages/chatgpt.html">chatGpt</a></li>
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-links"><a href="../pages/chatgpt.html">chatGpt</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -21,10 +23,12 @@
           <button id="productSubmit" class="addBtn">add</button>
           <button id="productRemove" class="removeBtn">rmv</button>
         </div>
-        <ul id="productList"></ul>
+        <div class="list-wrapper">
+          <ul class="product-list" id="productList"></ul>
+          <div id="removeFromList"></div>
+        </div>
       </div>
     </main>
-
     <script src="../script/navigation.js"></script>
     <script src="../script/oppgave5.js"></script>
   </body>

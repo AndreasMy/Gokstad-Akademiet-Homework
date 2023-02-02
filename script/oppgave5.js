@@ -1,4 +1,5 @@
 const productList = document.querySelector("#productList");
+const removeFromList = document.querySelector("#removeFromList");
 const productSubmitBtn = document.querySelector("#productSubmit");
 const productRemoveBtn = document.querySelector("#productRemove");
 let productInput = document.querySelector("#productInput");
@@ -43,8 +44,11 @@ function displayList() {
   productInput.value = "";
   productList.innerHTML = "";
 
+  //* use either map or for each to add new items
+
   for (let i = 0; i < products.length; i++) {
-    productList.innerHTML += `<li onclick="removeProduct(${i})"> ${products[i]} </li>`;
+    productList.innerHTML += `<li>${products[i]} <div onclick="removeProduct(${i})" class="rmv-line">-</div></li>`;
+
   }
 }
 
