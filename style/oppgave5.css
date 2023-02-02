@@ -31,7 +31,8 @@ header {
 }
 
 li {
-  list-style: none;
+  list-style-type: none;
+  position: relative;
 }
 
 a {
@@ -42,7 +43,8 @@ a,
 p,
 h1,
 h2,
-h3 {
+h3,
+li {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -70,7 +72,6 @@ main {
 
 .list-wrapper {
   display: flex;
-
 }
 
 .product-list {
@@ -79,9 +80,22 @@ main {
 }
 
 .rmv-line {
-  display: inline-block;
-  color: red;
-  font-size: xx-large;
+  position: absolute;
+  background-color: red;
+  height: 0.3rem;
+  width: 1rem;
+  right: -60;
+  top: 7;
+}
+
+img {
+  position: absolute;
+  color: white;
+  background-color: rgb(186, 186, 255);
+  height: 23px;
+  width: auto;
+  right: -95;
+  top: -2;
 }
 
 .form-and-btn {
@@ -97,5 +111,5 @@ main {
 }
 
 .list-item {
-  margin-right: 20px;
+  margin: 5px;
 }

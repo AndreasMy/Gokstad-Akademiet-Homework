@@ -3,6 +3,7 @@ const removeFromList = document.querySelector("#removeFromList");
 const productSubmitBtn = document.querySelector("#productSubmit");
 const productRemoveBtn = document.querySelector("#productRemove");
 let productInput = document.querySelector("#productInput");
+const editIcon = document.querySelector("#editIcon");
 /* 
 productSubmitBtn.disabled = true;
 
@@ -40,15 +41,19 @@ function removeProduct(i) {
   displayList();
 }
 
+function editProduct(i) {
+  const changedProduct = prompt("Edit Product", "sukker");
+  products.splice(i, 1, changedProduct);
+  displayList();
+}
+
 function displayList() {
   productInput.value = "";
   productList.innerHTML = "";
 
-  //* use either map or for each to add new items
-
+  //? use either map or for each to add new items
   for (let i = 0; i < products.length; i++) {
-    productList.innerHTML += `<li class="list-item">${products[i]} <div onclick="removeProduct(${i})" class="rmv-line">-</div></li>`;
-
+    productList.innerHTML += `<li class="list-item">${products[i]}<div onclick="removeProduct(${i})" class="rmv-line"></div><img src="../icons/edit-246.svg" id="editIcon" onclick="editProduct(${i})"></img></li>`;
   }
 }
 
