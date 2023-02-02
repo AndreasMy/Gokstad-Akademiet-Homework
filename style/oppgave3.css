@@ -55,13 +55,7 @@ main {
   margin: 15px;
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  list-style: none;
-  text-decoration: none;
-}
+
 
 .card-container {
   width: 345px;

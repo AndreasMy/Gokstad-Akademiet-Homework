@@ -7,7 +7,6 @@ html {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
 }
 
 input {
@@ -21,7 +20,6 @@ button {
   border: 0;
 }
 
-
 header {
   display: flex;
   flex-direction: row;
@@ -33,7 +31,7 @@ header {
 }
 
 li {
-  margin: 12px;
+
   list-style: none;
 }
 
@@ -62,13 +60,7 @@ main {
   margin-top: 20px;
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  list-style: none;
-  text-decoration: none;
-}
+
 
 .addBTN {
   background-color: blue;
@@ -78,9 +70,21 @@ main {
 .removeBtn {
   background-color: red;
 }
-* {
-  margin: 0;
-  padding: 0;
+
+.list-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.rmv-line {
+  display: inline-block;
+  color: red;
+  font-size: xx-large;
 }
 
 .form-and-btn {

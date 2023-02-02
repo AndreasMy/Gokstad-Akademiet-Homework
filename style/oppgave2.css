@@ -39,13 +39,7 @@ main {
   align-items: center;
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  list-style: none;
-  text-decoration: none;
-}
+
 
 .array-list {
   display: flex;
