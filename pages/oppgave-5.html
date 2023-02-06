@@ -19,11 +19,17 @@
       <div class="content-container">
         <h1>Handleliste</h1>
         <div class="form-and-btn">
-          
           <input class="input" type="text" name="product" id="productInput" />
-          <button type="button" id="productSubmit" class="addBtn" onclick="validateForm()">add</button>
-
+          <button
+            type="button"
+            id="productSubmit"
+            class="addBtn"
+            onclick="validateForm()"
+          >
+            add
+          </button>
         </div>
+        <div id="warningTextContainer" class="warning-text"></div>
         <div class="list-wrapper">
           <ul class="product-list" id="productList"></ul>
           <div id="removeFromList"></div>

@@ -111,5 +111,10 @@ img {
 }
 
 .list-item {
-  margin: 5px;
+  margin: 5px 0;
+}
+
+.warning-text {
+  color: red;
+  font-size: 0.75rem;
 }

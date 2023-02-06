@@ -3,31 +3,38 @@ const removeFromList = document.querySelector("#removeFromList");
 const productSubmitBtn = document.querySelector("#productSubmit");
 let productInput = document.querySelector("#productInput");
 const editIcon = document.querySelector("#editIcon");
+const warningTextConstainer = document.querySelector("#warningTextContainer");
 
-/* productSubmitBtn.addEventListener("click", () => {
-  addProduct();
-}); */
+const products = ["melk", "saft", "egg"];
 
 // use both click and enter
 productInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    addProduct();
+    validateForm();
   }
 });
 
-const products = ["melk", "saft", "egg"];
+// find() and some() will have the same syntax, but .find() satets the intention better
+// find() states that I'm looking for a particular array item
+// some() states that I'm looking for items that fits my needs or not
+// keeping the if statements inside the above function scope will reiterate the result
+// adding empty strings to the list
 
 function validateForm() {
   let x = productInput.value;
-  const isDuplicate = products.some(function (product) {
+  const isDuplicate = products.find(function (product) {
     return product === x;
   });
 
+  // use display: block; to reserve space for the warning text
+  const warningContent = document.createElement("div");
+  warningContent.classList.add("warningContent");
+  warningContent.textContent = `${isDuplicate} has already been added to the list`;
+
   if (isDuplicate) {
-    console.log("duplicate");
+    warningTextConstainer.appendChild(warningContent);
     displayList();
   } else {
-    console.log("not duplicate");
     addProduct();
     displayList();
   }
