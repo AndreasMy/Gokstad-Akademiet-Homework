@@ -1,9 +1,9 @@
 const productList = document.querySelector("#productList");
 const removeFromList = document.querySelector("#removeFromList");
 const productSubmitBtn = document.querySelector("#productSubmit");
-let productInput = document.querySelector("#productInput");
+const productInput = document.querySelector("#productInput");
 const editIcon = document.querySelector("#editIcon");
-const warningTextConstainer = document.querySelector("#warningTextContainer");
+const warningText = document.querySelector("#warningText");
 
 const products = ["melk", "saft", "egg"];
 
@@ -26,15 +26,15 @@ function validateForm() {
     return product === x;
   });
 
-  // use display: block; to reserve space for the warning text
-  const warningContent = document.createElement("div");
-  warningContent.classList.add("warningContent");
-  warningContent.textContent = `${isDuplicate} has already been added to the list`;
-
+  // use display: block; to reserve space for the warning
   if (isDuplicate) {
-    warningTextConstainer.appendChild(warningContent);
+    document.querySelector("#warningText").style.visibility = "visible";
+    warningText.innerHTML = `${isDuplicate} has already been added to the list`;
+    productInput.style.borderColor = "red";
     displayList();
   } else {
+    productInput.style.borderColor = "black";
+    document.querySelector("#warningText").style.visibility = "hidden";
     addProduct();
     displayList();
   }

@@ -61,6 +61,12 @@ main {
   margin-top: 20px;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 .addBTN {
   background-color: blue;
   margin: 8px;
@@ -115,6 +121,7 @@ img {
 }
 
 .warning-text {
+  visibility: hidden;;
   color: red;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
