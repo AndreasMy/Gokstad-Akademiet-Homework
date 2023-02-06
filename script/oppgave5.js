@@ -1,15 +1,13 @@
 const productList = document.querySelector("#productList");
 const removeFromList = document.querySelector("#removeFromList");
 const productSubmitBtn = document.querySelector("#productSubmit");
-const productRemoveBtn = document.querySelector("#productRemove");
 let productInput = document.querySelector("#productInput");
 const editIcon = document.querySelector("#editIcon");
 
-productSubmitBtn.addEventListener("click", () => {
+/* productSubmitBtn.addEventListener("click", () => {
   addProduct();
-});
+}); */
 
-productRemoveBtn.addEventListener("click", removeProduct);
 // use both click and enter
 productInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
@@ -18,18 +16,21 @@ productInput.addEventListener("keypress", function (e) {
 });
 
 const products = ["melk", "saft", "egg"];
-const item = "melk";
 
 function validateForm() {
-  let x = document.forms["text"]["product"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
+  let x = productInput.value;
+  const isDuplicate = products.some(function (product) {
+    return product === x;
+  });
 
-if (products.includes(item)) {
-  console.log("Melk!");
+  if (isDuplicate) {
+    console.log("duplicate");
+    displayList();
+  } else {
+    console.log("not duplicate");
+    addProduct();
+    displayList();
+  }
 }
 
 console.log(products);
@@ -51,8 +52,8 @@ function editProduct(i) {
 }
 
 function displayList() {
-  productInput.value = "";
   productList.innerHTML = "";
+  productInput.value = "";
 
   for (let i = 0; i < products.length; i++) {
     productList.innerHTML += `<li class="list-item">${products[i]}<div onclick="removeProduct(${i})" class="rmv-line"></div><img src="../icons/edit-246.svg" id="editIcon" onclick="editProduct(${i})"></img></li>`;
