@@ -63,7 +63,14 @@ function displayList() {
   productInput.value = "";
 
   for (let i = 0; i < products.length; i++) {
-    productList.innerHTML += `<li class="list-item">${products[i]}<div onclick="removeProduct(${i})" class="rmv-line"></div><img src="../icons/edit-246.svg" id="editIcon" onclick="editProduct(${i})"></img></li>`;
+    productList.innerHTML += `
+    <li class="list-item">
+      ${products[i]}
+      <div onclick="removeProduct(${i})" class="rmv-line">
+      </div>
+      <img src="../icons/edit-246.svg" id="editIcon" onclick="editProduct(${i})" />
+      
+    </li>`;
   }
 }
 
